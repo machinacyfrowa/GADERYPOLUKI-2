@@ -45,12 +45,48 @@ string gaderypoluki2(string text)
             case 'G':
                 newText += 'A';
                 break;
+            case 'D':
+                newText += 'E';
+                break;
+            case 'E':
+                newText += 'D';
+                break;
+            case 'R':
+                newText += 'Y';
+                break;
+            case 'Y':
+                newText += 'R';
+                break;
+            case 'P':
+                newText += 'O';
+                break;
+            case 'O':
+                newText += 'P';
+                break;
+            case 'L':
+                newText += 'U';
+                break;
+            case 'U':
+                newText += 'L';
+                break;
+            case 'K':
+                newText += 'I';
+                break;
+            case 'I':
+                newText += 'K';
+                break;
+            default:
+                newText += c;
+                break;
         }
     }
     return newText;
 }
 
-string text = "ALA MA KOTA";
+string text = "";
+
+Console.WriteLine("Podaj zdanie do zakodowania: ");
+text = Console.ReadLine();
 
 string text1 = gaderypoluki(text);
 
