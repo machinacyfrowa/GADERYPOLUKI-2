@@ -26,16 +26,36 @@
     text = text.Replace('@', 'U');
 
     //para K->I, I->K
-    text = text.Replace('L', '@');
-    text = text.Replace('U', 'L');
-    text = text.Replace('@', 'U');
+    text = text.Replace('K', '@');
+    text = text.Replace('I', 'K');
+    text = text.Replace('@', 'I');
 
     return text;
 }
-
+string gaderypoluki2(string text)
+{
+    string newText = "";
+    foreach(char c in text)
+    {
+        switch(c)
+        {
+            case 'A':
+                newText += 'G';
+                break;
+            case 'G':
+                newText += 'A';
+                break;
+        }
+    }
+    return newText;
+}
 
 string text = "ALA MA KOTA";
 
-text = gaderypoluki(text);
+string text1 = gaderypoluki(text);
 
-Console.WriteLine(text);
+Console.WriteLine("Funkcja gaderypoluki(): " + text1);
+
+string text2 = gaderypoluki2(text);
+
+Console.WriteLine("Funkcja gaderypoluki2(): " + text2);
